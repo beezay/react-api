@@ -137,3 +137,55 @@ body {
   transform: scale(0.901);
   border-style:groove;
 }
+
+.btn-wrapper {
+  display: flex;
+  width: 80%;
+  /* border: 2px solid black; */
+  justify-content: space-evenly;
+  margin: 12px auto;
+}
+
+.btn-wrapper .fetch-btn {
+  padding:14px;
+  border-style: none;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  width: 10rem;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.btn-wrapper .fetch-btn:focus {
+  outline: none;
+}
+
+.fetch-btn.posts {
+  background-color: #bdc3c7;
+  color: #34495e;
+}
+
+.fetch-btn.posts:hover {
+  color: #bdc3c7;
+  background-color: #34495e;
+}
+
+.fetch-btn.jokes {
+  background-color: #1abc9c;
+  color: #ecf0f1;
+}
+
+.fetch-btn.jokes:hover {
+  color: #000807;
+  background-color: #b3f3bb;
+}
+
+.fetch-btn.users {
+  background-color: #212121;
+  color: #bebebe;
+}
+
+.fetch-btn.users:hover {
+  color: #212121;
+  background-color: #bebebe;
+}

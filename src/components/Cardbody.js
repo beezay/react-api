@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Card from "./Card";
-import Modal from "./Modal";
+// import Modal from "./Modal";
 
 class Cardbody extends Component {
   constructor(props) {
@@ -8,6 +8,8 @@ class Cardbody extends Component {
 
     this.state = {};
   }
+
+
 
   render() {
     const { posts } = this.props;
@@ -18,6 +20,7 @@ class Cardbody extends Component {
           {posts.map((post) => {
             return <Card key={post.id} post={post} />;
           })}
+          {/* <h1>Hello</h1> */}
         </div>
     );
   }
