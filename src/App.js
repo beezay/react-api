@@ -1,7 +1,6 @@
 import { Component } from "react";
 
 import Cardbody from "./components/Cardbody";
-import Modal from "./components/Modal";
 
 //***FETCH TASKS FROM API
 const fetchPosts = async () => {
@@ -22,22 +21,19 @@ class App extends Component {
   componentDidMount() {
     const getPosts = async () => {
       const postsFromServer = await fetchPosts();
-      console.log(postsFromServer);
+      //console.log(postsFromServer);
       this.setState({ posts: postsFromServer });
     };
     getPosts();
   }
 
   render() {
-    console.log("From App =>", this.state.posts);
+    // console.log("From App =>", this.state.posts);
     return (
-      <>
         <div className="container">
           <h3>Welcome to React Task</h3>
           <Cardbody posts={this.state.posts} />
         </div>
-        {/* <Modal /> */}
-      </>
     );
   }
 }

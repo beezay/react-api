@@ -13,20 +13,20 @@ class Modal extends Component {
 
 
   render() {
-    const hideModal = () => {
-        document.querySelector('.modal').style.display = 'none'
-        this.setState({
-            showPop: false
-        })
-        console.log('Hide Me')
-    }
+    // const hideModal = () => {
+    //     document.querySelector('.modal').style.display = 'none'
+    //     this.setState({
+    //         showPop: false
+    //     })
+    //     console.log('Hide Me')
+    // }
 
-    const {post, state} = this.props
+    const {post, state, onModalClick} = this.props
     console.log('modal',state,this.state)
     return (
       <div className="modal">
         <div className="modal-content">
-          <button className="btn btn-close" onClick={this.props.onModalClick} >Close</button>
+          <button className="btn btn-close" onClick={()=>onModalClick()} >Close</button>
           <div className="header">
             <h4>{post.title}</h4>
           </div>
