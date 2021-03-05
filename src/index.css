@@ -226,6 +226,12 @@ body {
 }
 
 .fetch-btn.users:hover {
+  color: #fff;
+  background-color: #000807;
+  
+}
+
+.fetch-btn.hide:hover {
   color: #212121;
   background-color: #bebebe;
 }
