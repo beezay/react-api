@@ -8,6 +8,7 @@
 body {
   font-family: "Baloo 2", cursive;
   background-color: #f8f8f7;
+  position: relative;
   /* font-family: 'Srisakdi', cursive; */
 }
 
@@ -23,6 +24,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   margin: 20px;
+  height: 100%;
   /* border: 2px solid black; */
 }
 
@@ -67,8 +69,8 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   overflow: auto;
   z-index: 10;
   background-color:rgba(255, 255, 255, 0.678);
@@ -76,8 +78,9 @@ body {
   /* display: none; */
 }
 
+
 .modal-content {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -94,7 +97,7 @@ body {
   margin: 10px 8px;
   min-height: 12rem;
   padding: 12px;
-  font-size: 8rem;
+  font-size: 24px;
   font-family: "Baloo 2", cursive;
   border-bottom: 2px solid #487eb0;
   color: #353b48;
@@ -111,7 +114,7 @@ body {
 .btn {
   display: block;
   position: absolute;
-  top: 10px;
+  top: 140px;
   right: 20px;
   background: #1e1e1f;
   width: 110px;
