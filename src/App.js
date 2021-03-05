@@ -2,6 +2,7 @@ import { Component } from "react";
 
 import Cardbody from "./components/Cardbody";
 
+
 // //***FETCH TASKS FROM API
 // const fetchPosts = async () => {
 //   const res = await fetch("http://localhost:5000/posts");
@@ -16,6 +17,7 @@ class App extends Component {
     this.state = {
       url: '',
       fetchData: false,
+      
     };
   }
 
@@ -55,7 +57,14 @@ class App extends Component {
           >
             Users
           </button>
+          <button
+            className="fetch-btn hide"
+            onClick={() => this.setState({ fetchData: false})}
+          >
+            Hide All
+          </button>
         </div>
+        
         {this.state.fetchData && <Cardbody url={this.state.url}/>}
       </div>
     );
