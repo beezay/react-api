@@ -100,6 +100,8 @@ body {
 }
 
 
+
+
 .modal-content {
   position: fixed;
   top: 50%;
@@ -112,6 +114,20 @@ body {
   background: #f5f6fa;
   box-shadow: rgba(8, 8, 224, 0.2) 0px 7px 29px 0px;
   text-align: center;
+  transition: all 2s ease-in;
+  animation: modalshow 1s ease-in-out;
+}
+
+@keyframes modalshow {
+  from {
+    opacity: 0.2;
+    transform: scale(1.5);
+    transform-origin: 50% 50% 0;
+    transform-style: preserve-3d;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .modal-content .header {
