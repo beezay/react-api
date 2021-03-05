@@ -1,21 +1,27 @@
 import React, { Component } from "react";
+import Modal from "./Modal";
 
 class Card extends Component {
-        constructor(props) {
-            super(props);
-            this.state = {  };
-        }
-   
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
   render() {
+    const { post } = this.props;
+    console.log("Card=> ", post);
     return (
-      <div className="card-body">
-        <div className="header">
-          <h4>{this.props.title}</h4>
+      <>
+        <div className="card-body">
+          <div className="header">
+            <h4>{post.title}</h4>
+          </div>
+          <div className="footer">
+            <p>{post.author}</p>
+          </div>
         </div>
-        <div className="footer">
-          <p>This is card body 1</p>
-        </div>
-      </div>
+        <Modal />
+      </>
     );
   }
 }
