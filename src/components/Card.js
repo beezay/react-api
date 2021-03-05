@@ -4,15 +4,25 @@ import Modal from "./Modal";
 class Card extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      showModal: false,
+    };
   }
 
   render() {
-    const { post } = this.props;
+
+    const modalShow = (id) => {
+      this.setState({
+        showModal: true,
+      });
+      console.log("ShowModal", id);
+    };
+
+    const { post  } = this.props;
     console.log("Card=> ", post);
     return (
       <>
-        <div className="card-body">
+        <div className="card-body" onClick={() => modalShow(post.id)}>
           <div className="header">
             <h4>{post.title}</h4>
           </div>
@@ -20,7 +30,8 @@ class Card extends Component {
             <p>{post.author}</p>
           </div>
         </div>
-        <Modal />
+
+        { this.state.showModal && <Modal post={post}  onModalClick={()=>this.setState({showModal:false})}/>} 
       </>
     );
   }
